@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+
 const Contact = ({currentContact}) => {
+
     return(
         <>
         <h1>{currentContact.name}</h1>

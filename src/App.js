@@ -20,7 +20,7 @@ function App() {
       <Navbar home='/' onClick={setNewContactBool} contactList={contacts} setContactList={setContacts}/>
       <Switch>
         <Route exact path='/'>
-          <Home contactPath='/contact' contacts={contacts} newContactBool={newContactBool} setCurrentContact={setCurrentContact}/>
+          <Home contactPath='/contact' contacts={contacts} setContacts={setContacts} newContactBool={newContactBool} setCurrentContact={setCurrentContact}/>
         </Route>
         <Route path ='/contact'>
           <Contact currentContact={currentContact}/>

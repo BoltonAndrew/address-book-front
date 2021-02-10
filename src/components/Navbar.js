@@ -22,7 +22,7 @@ const Navbar = ({home, onClick, contactList, setContactList}) => {
                 <input  className="searchbar" type="text" onChange={(event) => setInput(event.target.value)}/>
                 <button className="search-btn">Search</button>
             </form>
-            <button onClick={onClick} className="add-btn">+</button>
+            <button onClick={() => onClick(true)} className="add-btn">+</button>
         </div>
     );
 };

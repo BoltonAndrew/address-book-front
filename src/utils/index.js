@@ -6,14 +6,13 @@ export const fetchNames = async (setContactList) => {
     setContactList(data);
 };
 
-export const fetchOneContact = async (event, contactId, setCurrentContact) => {
-    event.preventDefault();
+export const fetchOneContact = async (contactId, setCurrentContact) => {
     const response = await fetch(`http://localhost:5000/contacts/${contactId}`);
     const data = await response.json();
     setCurrentContact(data);
 };
 
-export const newContact = async (event, name, email, phone, contactList) => {
+export const newContact = async (event, name, email, phone, setContactList) => {
     event.preventDefault();
     const response = await fetch('http://localhost:5000/contacts', {
         method: 'POST',
@@ -25,7 +24,7 @@ export const newContact = async (event, name, email, phone, contactList) => {
         }),
     });
     await response.json();
-    fetchNames(contactList);
+    fetchNames(setContactList);
 };
 
 export const editContact = async (event, name, email, phone, currentContact, setCurrentContact, contactList) => {
