@@ -7,6 +7,7 @@ const ContactList = () => {
     
     return ( 
     <div className="list-container">
+        <h1>Contacts</h1>
         <ul>
             <li>Dummy List item</li>
             <li>These will be populated with contact names from DB</li>

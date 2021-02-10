@@ -15,8 +15,8 @@ const Navbar = () => {
             <form>
                 <input onChange={handleSubmit} className="searchbar" type="text"/>
                 <button className="search-btn">Search</button>
+                <button className="add-btn">+</button>
             </form>
-            
         </div>
     );
 };

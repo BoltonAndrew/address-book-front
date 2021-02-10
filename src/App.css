@@ -1,16 +1,26 @@
+
+body{
+  background-color: #EDF0F3;
+}
 /* Nav Bar Elements Styling */
 .nav{
+  top: 50px;
   display : flex;
   justify-content: center;
-  background-color: #30E3CA;
+  background-color: #F9FAFB;
   padding: 10px;
   align-items: center;
+  width: 50%;
+  margin: 50px auto 0 auto;
+  border-radius: 5px 5px 0 0 ;
 }
+
 .searchbar{ 
   margin: 10px;
   border-radius: 5px;
   padding: 5px;
   border: none;
+  background-color: #EAEDF0;
 }
 .searchbar:focus{
   outline: none;
@@ -22,6 +32,7 @@
   color: white;
   border-radius: 10px;
   padding: 5px;
+  margin-right: 100px;
 }
 .home-btn:hover{
   background-color: #2bacb1;
@@ -43,10 +54,28 @@
 .search-btn:hover{
   background-color: #2bacb1;
 }
+.add-btn{
+  background-color: #EAEDF0;
+  color: #d5d9db;
+  border: none;
+  padding: 0 10px;
+  border-radius: 30px;
+  font-size: 50px;
+  margin-left: 50px;
+}
+.add-btn:hover{
+  background-color: #d4d6d8;
+  color: #b8babb;
+}
 
 /* List Styling */
 .list-container{
-  background-color:#E4F9F5;
+  background-color:#F9FAFB;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  width: 51.5%;
+  margin: auto;
+  border-radius: 0 0 5px 5px;
 }
