@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return(
         <div className="nav">
-            <a className="home-btn" href="/">Home</a>
+            <a className="home-btn" href="/"><img src="../public.images/home.png" alt="home-button"></img></a>
             <form>
                 <input onChange={handleSubmit} className="searchbar" type="text"/>
                 <button className="search-btn">Search</button>
@@ -22,3 +22,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

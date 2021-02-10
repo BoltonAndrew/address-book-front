@@ -1,7 +1,8 @@
+/* Nav Bar Elements Styling */
 .nav{
   display : flex;
   justify-content: center;
-  background-color: blue;
+  background-color: #30E3CA;
   padding: 10px;
   align-items: center;
 }
@@ -10,24 +11,42 @@
   border-radius: 5px;
   padding: 5px;
   border: none;
-
+}
+.searchbar:focus{
+  outline: none;
+  border: 1px solid #228b8f;
 }
 .home-btn{
   justify-content:left;
-  background-color: chartreuse;
+  background-color: #11999E;
+  color: white;
   border-radius: 10px;
   padding: 5px;
-  
+}
+.home-btn:hover{
+  background-color: #2bacb1;
+}
+.home-btn:focus{
+  outline: none;
+  border: 1px solid #094f50;
 }
 .search-btn{
-  background-color: chartreuse;
+  background-color: #11999E;
   border: none;
   padding: 5px;
   border-radius: 10px;
 }
+.search-btn:focus{
+  outline: none;
+  border: 1px solid #094f50;
+}
+.search-btn:hover{
+  background-color: #2bacb1;
+}
+
+/* List Styling */
 .list-container{
-  background-color:darkcyan;
+  background-color:#E4F9F5;
   display: flex;
   justify-content: center;
-  
 }
