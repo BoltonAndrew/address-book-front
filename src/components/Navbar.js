@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import "../App.css"
+import "../App.css";
+import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+
 
 const Navbar = () => {
     const [input, setInput] = useState("")
@@ -11,7 +13,7 @@ const Navbar = () => {
 
     return(
         <div className="nav">
-            <a className="home-btn" href="/">Home</a>
+            <Link to='/'><a className="home-btn">Home</a></Link>   
             <form>
                 <input onChange={handleSubmit} className="searchbar" type="text"/>
                 <button className="search-btn">Search</button>
@@ -22,3 +24,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
