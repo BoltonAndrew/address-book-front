@@ -1,22 +1,24 @@
 import React, {useState} from 'react';
 import "../App.css"
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({home, onClick, contactList, setContactList}) => {
     const [input, setInput] = useState("")
 
     const handleSubmit = (e) => {
-        setInput(e.target.value)
-        console.log(input)
+        e.preventDefault();
+        // const floatArr = contactList.filter((contact) => contact.name === input)
+        // setContactList(floatArr)
     }
 
     return(
         <div className="nav">
-            <a className="home-btn" href="/"><img src="../public.images/home.png" alt="home-button"></img></a>
-            <form>
-                <input onChange={handleSubmit} className="searchbar" type="text"/>
+            <Link className="home-btn" to={home}><img src="../public/images/home.png" alt="home-button"></img></Link>
+            <form onSubmit={handleSubmit}>
+                <input  className="searchbar" type="text" onChange={(event) => setInput(event.target.value)}/>
                 <button className="search-btn">Search</button>
-                <button className="add-btn">+</button>
             </form>
+            <button onClick={onClick} className="add-btn">+</button>
         </div>
     );
 };

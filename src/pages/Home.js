@@ -1,4 +1,4 @@
-import { ContactList } from '../components/ContactList';
+import ContactList from '../components/ContactList';
 import { newContact } from '../utils';
 import { useState } from 'react';
  
