@@ -6,7 +6,7 @@ body{
 .nav{
   top: 50px;
   display : flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #F9FAFB;
   padding: 10px;
   align-items: center;
@@ -29,10 +29,12 @@ body{
 .home-btn{
   justify-content:left;
   background-color: #11999E;
-  color: white;
+  color: #fff;
   border-radius: 10px;
-  padding: 5px;
-  margin-right: 100px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  text-decoration: none;
+  line-height: 1.5;
 }
 .home-btn:hover{
   background-color: #2bacb1;
@@ -44,8 +46,9 @@ body{
 .search-btn{
   background-color: #11999E;
   border: none;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 10px;
+  color: #fff;
 }
 .search-btn:focus{
   outline: none;
@@ -55,17 +58,17 @@ body{
   background-color: #2bacb1;
 }
 .add-btn{
-  background-color: #EAEDF0;
-  color: #d5d9db;
+  background-color: #d4d6d8;
+  color: #b8babb;
   border: none;
   padding: 0 10px;
   border-radius: 30px;
-  font-size: 50px;
-  margin-left: 50px;
+  font-size: 30px;
+  margin-right: 20px;
 }
 .add-btn:hover{
-  background-color: #d4d6d8;
-  color: #b8babb;
+  background-color: #bdc0c2;
+  color: #919394;
 }
 
 /* List Styling */
@@ -78,4 +81,34 @@ body{
   width: 51.5%;
   margin: auto;
   border-radius: 0 0 5px 5px;
+}
+
+.list-container h1 {
+  color: #9b9999;
+}
+/* Add user form  */
+.add-user-container{
+  display: flex;
+  width: 50%;
+ justify-content: center;
+  margin: auto;
+}
+.add-input {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  background-color: #fff;
+  
+}
+
+.add-button{
+  background-color: #11999E;
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 5px 10px;
+  height: 28px;
+  margin: auto;
 }

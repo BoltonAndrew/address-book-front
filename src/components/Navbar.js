@@ -17,7 +17,7 @@ const Navbar = ({home, onClick, contactList, setContactList}) => {
 
     return(
         <div className="nav">
-            <Link className="home-btn" to={home}><img src="../public/images/home.png" alt="home-button"></img></Link>
+            <Link className="home-btn" to={home}>Home</Link>
             <form onSubmit={handleSubmit}>
                 <input  className="searchbar" type="text" onChange={(event) => setInput(event.target.value)}/>
                 <button className="search-btn">Search</button>
