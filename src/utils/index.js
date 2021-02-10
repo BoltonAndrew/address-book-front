@@ -6,9 +6,9 @@ export const fetchNames = async (setContactList) => {
     setContactList(data);
 };
 
-export const fetchOneContact = async (event, name, setCurrentContact) => {
+export const fetchOneContact = async (event, contact, setCurrentContact) => {
     event.preventDefault();
-    const response = await fetch(`http://localhost:5000/contacts/${name}`);
+    const response = await fetch(`http://localhost:5000/contacts/${contact.id}`);
     const data = await response.json();
     setCurrentContact(data);
 };
