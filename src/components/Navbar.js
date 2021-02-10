@@ -7,8 +7,12 @@ const Navbar = ({home, onClick, contactList, setContactList}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const floatArr = contactList.filter((contact) => contact.name === input)
-        // setContactList(floatArr)
+        const floatArr = contactList.filter((contact) => contact.name === input)
+        if (!floatArr) {
+            setContactList([{}])
+        } else {
+        setContactList(floatArr)
+        }
     }
 
     return(
