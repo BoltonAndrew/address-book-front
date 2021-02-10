@@ -9,7 +9,7 @@ const ContactList = ({contacts, contactPath, setCurrentContact}) => {
         <h1>Contacts</h1>
         {contacts.map((cont, index) => {
             return(
-                <Link key={index} onClick={(event) => {fetchOneContact(event, cont._id, setCurrentContact)}} to={contactPath}>{cont.name}</Link>
+                <Link key={index} to={contactPath} onClick={(event) => {fetchOneContact(cont._id, setCurrentContact)}}>{cont.name}</Link>
             )
         })}
     </div>
