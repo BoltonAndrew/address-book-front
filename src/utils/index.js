@@ -28,9 +28,9 @@ export const newContact = async (event, name, email, phone, contactList) => {
     fetchNames(contactList);
 };
 
-export const editContact = async (event, name, email, phone, setCurrentContact, contactList) => {
+export const editContact = async (event, name, email, phone, currentContact, setCurrentContact, contactList) => {
     event.preventDefault();
-    const response = await fetch('http://localhost:5000/contacts', {
+    const response = await fetch(`http://localhost:5000/contacts${currentContact._id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -46,12 +46,9 @@ export const editContact = async (event, name, email, phone, setCurrentContact, 
 
 export const deleteContact = async (event, contactId, contactList, setCurrentContact) => {
     event.preventDefault();
-    const response = await fetch('http://localhost:5000/contacts', {
+    const response = await fetch(`http://localhost:5000/contacts${contactId}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            id: contactId,
-        }),
     });
     await response.json();
     fetchNames(contactList);
